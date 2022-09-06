@@ -44,11 +44,11 @@ public class Gui extends Application {
         circle.setStroke(Color.BLACK);
 
 
-        Line line = new Line(200, 70, 300, 70); // Line from (70,70) to (100,70)
+        Line line = new Line(200, 70, 300, 70);
         pane.getChildren().add(line);
 
         // Rectangle from (100,40) width 75 and height 25
-        Rectangle rektangel = new Rectangle(100, 40, 75, 25);
+        Rectangle rektangel = new Rectangle(150, 40, 75, 25);
         pane.getChildren().add(rektangel);
         rektangel.setFill(Color.CORAL);
     }
