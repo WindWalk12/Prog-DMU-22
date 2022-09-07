@@ -1,3 +1,5 @@
+package Opg1;
+
 import javafx.application.Application;
 
 public class App {
