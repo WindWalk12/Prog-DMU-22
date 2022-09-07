@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/E1 1-8/E1 1-8.iml" filepath="$PROJECT_DIR$/E1 1-8/E1 1-8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Figurer med JavaFX/Figurer med JavaFX.iml" filepath="$PROJECT_DIR$/Figurer med JavaFX/Figurer med JavaFX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Prog-DMU-22-Sem1.iml" filepath="$PROJECT_DIR$/.idea/Prog-DMU-22-Sem1.iml" />
+    </modules>
+  </component>
+</project>
