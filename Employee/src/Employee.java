@@ -82,9 +82,9 @@ public class Employee {
 	public void printEmployee() {
 		System.out.println("*******************");
 		System.out.println("Name " + name);
-		System.out.println("Efternavn " + lastname);
+		System.out.println("Lastname " + lastname);
 		System.out.println("Trainee " + trainee);
-		System.out.println("Alder " + age);
+		System.out.println("Age " + age);
 		System.out.println();
 	}
 }
