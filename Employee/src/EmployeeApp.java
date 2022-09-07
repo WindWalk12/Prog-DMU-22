@@ -1,5 +1,3 @@
-package Opg1;
-
 /*
  * Anvendelses program der opretter Employee objekter og anvender metoder på disse
  */

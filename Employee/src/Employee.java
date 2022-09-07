@@ -1,5 +1,3 @@
-package Opg1;
-
 /**
  * Klasse der beskriver en ansat
  *
