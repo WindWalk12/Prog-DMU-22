@@ -46,7 +46,7 @@ public class Gui extends Application {
         // Polygon with 3 points (100,100)(200,100)(150,150)
         Polygon polygon = new Polygon(240, 250, 300, 100, 360, 250);
         pane.getChildren().add(polygon);
-        polygon.setFill(Color.BLACK);
+        polygon.setFill(Color.GREEN);
 
         Circle circle4 = new Circle(450, 50, 100);
         // Circle centrum 70,70 og radius 30
