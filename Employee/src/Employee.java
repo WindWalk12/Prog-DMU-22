@@ -17,11 +17,11 @@ public class Employee {
 	 * Constructor, når den ansatte oprettes, skal den have et navn. Ved
 	 * oprettelse er den ansatte en trainee
 	 */
-	public Employee(String inputName, String inputLastname, int alder) {
+	public Employee(String inputName, String inputLastname, int inputAge) {
 		name = inputName;
 		lastname = inputLastname;
 		trainee = true;
-		age = alder;
+		age = inputAge;
 	}
 
 	/*
@@ -63,20 +63,20 @@ public class Employee {
 	/*
 		Ændre en ansats alder
 	 */
-	public void setAge(int age) {
-		this.age = age;
+	public void setAge(int inputAge) {
+		age = inputAge;
 	}
 
 	public void birthday() {
-		this.age += 1;
+		age += 1;
 	}
 
 	public String getLastname() {
 		return lastname;
 	}
 
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
+	public void setLastname(String inputLastname) {
+		lastname = inputLastname;
 	}
 
 	public void printEmployee() {
