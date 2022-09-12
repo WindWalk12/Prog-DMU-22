@@ -1,4 +1,4 @@
-package Opg5;
+package Ex5;
 
 public class App {
     public static void main(String[] args) {

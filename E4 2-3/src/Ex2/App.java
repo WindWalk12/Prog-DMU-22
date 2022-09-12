@@ -1,4 +1,4 @@
-package Opg2;
+package Ex2;
 
 import java.util.Scanner;
 

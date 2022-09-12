@@ -1,4 +1,4 @@
-package Opg3;
+package Ex3;
 
 import java.util.Scanner;
 

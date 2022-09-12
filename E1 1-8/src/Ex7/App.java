@@ -1,4 +1,4 @@
-package Opg7;
+package Ex7;
 
 public class App {
     public static void main(String[] args) {

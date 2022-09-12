@@ -1,4 +1,4 @@
-package Opg2;
+package Ex2;
 
 public class App {
     public static void main(String[] args) {
