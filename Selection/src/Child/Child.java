@@ -50,6 +50,10 @@ public class Child {
 		}
 	}
 
+	public String gender2() {
+		return boy ? "Boy" : "Girl";
+	}
+
 	public String team() {
 		if (!boy && this.age < 8) {
 			return "Tumbling girls";

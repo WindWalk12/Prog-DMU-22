@@ -9,7 +9,7 @@ public class ChildApp {
 		Child c4 = new Child(10, false);
 
 		System.out.println("Et barn på " + c1.getAge() + " Går i " + c1.institution() + " Og skal gå på spring hold: " + c1.team());
-		System.out.println("Barnet er en " + c1.gender());
+		System.out.println("Barnet er en " + c1.gender2());
 		System.out.println("");
 
 		System.out.println("Et barn på " + c2.getAge() + " Går i " + c2.institution() + " Og skal gå på spring hold: " + c2.team());
