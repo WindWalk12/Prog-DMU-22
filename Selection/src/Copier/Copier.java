@@ -20,7 +20,7 @@ public class Copier {
         } else if (paper == 0) {
             System.out.println("Nice try not putting anything into the tray");
         } else if (this.paper + paper > 500) {
-            System.out.println("The tray can only hold 500 papers. You can only put in " + (500 - this.paper));
+            System.out.println("The tray can only hold 500 papers. Space left: " + (500 - this.paper));
         } else if (this.paper + paper <= 500) {
             this.paper += paper;
         }
@@ -37,6 +37,7 @@ public class Copier {
                 break;
             } else if (paperJam) {
                 System.out.println("Error paper is jammed");
+                break;
             } else {
                 this.paper--;
                 System.out.println("Making a copy");
