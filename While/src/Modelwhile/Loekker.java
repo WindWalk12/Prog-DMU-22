@@ -78,16 +78,34 @@ public class Loekker {
 	}
 
 	public void allPowers() {
-		// TODO Opgave 3.a
+		int i = 0;
+		while (i < 20) {
+			System.out.println(Math.pow(2, i));
+			i++;
+		}
 	}
 
 	public int sumOdd(int a, int b) {
-		// TODO Opgave 3.b
-		return -1;
+		int sum = 0;
+		if (a%2 == 0) {
+			a++;
+		}
+		while (a <= b) {
+			sum = sum + a;
+			a+=2;
+		}
+		return sum;
 	}
 
 	public int sumOfOddDigits(int number) {
-		// TODO Opgave 3.c
-		return -1;
+		int sum = 0;
+		int i = 0;
+		while (i < String.valueOf(number).length()) {
+			if (Integer.parseInt(Integer.toString(number).substring(i, i + 1))%2 != 0) {
+				sum += Integer.parseInt(Integer.toString(number).substring(i, i + 1));
+			}
+			i++;
+		}
+		return sum;
 	}
 }

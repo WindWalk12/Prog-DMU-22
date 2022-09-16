@@ -20,9 +20,9 @@ public class App {
 		System.out.println(loekker.summerSquare(10));
 
 		// Klad af metoder der afprøver opgave 3
-        // loekker.allPowers();
-        // System.out.println(loekker.sumOdd(3, 19));
-        // System.out.println(loekker.sumOfOddDigits(32677));
+        loekker.allPowers();
+        System.out.println(loekker.sumOdd(3, 19));
+        System.out.println(loekker.sumOfOddDigits(32677));
 
     }
 }
