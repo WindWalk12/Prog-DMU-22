@@ -68,5 +68,39 @@ public class App {
             }
             System.out.println();
         }
+
+        System.out.println();
+        System.out.println("d) with only one asterisk");
+
+        for (int i = 0; i < 10; i++) {
+            if (i < 5) {
+                for (int j = 4; j > i; j--) {
+                    System.out.print(" ");
+                }
+                for (int j = 0; j <= i; j++) {
+                    if (j == 0) {
+                        System.out.print("*");
+                    } else {
+                        for (int k = 0; k < 2; k++) {
+                            System.out.print("*");
+                        }
+                    }
+                }
+            } else {
+                for (int j = 5; j < i; j++) {
+                    System.out.print(" ");
+                }
+                for (int j = 10; j > i; j--) {
+                    if (j == 10) {
+                        System.out.print("*");
+                    } else {
+                        for (int k = 0; k < 2; k++) {
+                            System.out.print("*");
+                        }
+                    }
+                }
+            }
+            System.out.println();
+        }
     }
 }
