@@ -79,7 +79,7 @@ public class Loekker {
 
 	public void allPowers() {
 		int i = 0;
-		while (i < 20) {
+		while (i <= 20) {
 			System.out.println(Math.pow(2, i));
 			i++;
 		}
