@@ -1,4 +1,4 @@
-package eksempel3;
+package Exercise2;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -30,18 +30,10 @@ public class Gui extends Application {
 	// ------------------------------------------------------------------------
 
 	private void drawShapes(GraphicsContext gc) {
-//		int x1 = 100; // start point: (x1,y1)
-//		int y1 = 200;
-//		int y2 = 10;
-//		gc.strokeLine(x1, y1, 20, y2);
-//		gc.strokeLine(x1, y1, 60, y2);
-//		gc.strokeLine(x1, y1, 100, y2);
-//		gc.strokeLine(x1, y1, 140, y2);
-//		gc.strokeLine(x1, y1, 180, y2);
 
-        int x1 = 100; // start point: (x1,y1)
+        int x1 = 100;
         int y1 = 100;
-        int x2 = 20; // end point: (x2,y2)
+        int x2 = 20;
         int y2 = 10;
         while (x2 <= 180) {
             gc.strokeLine(x1, y1, x2, y2);

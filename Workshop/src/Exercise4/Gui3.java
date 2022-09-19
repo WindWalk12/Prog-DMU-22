@@ -1,4 +1,4 @@
-package Eksempel4;
+package Exercise4;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -7,7 +7,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-public class Gui extends Application {
+public class Gui3 extends Application {
 
 	@Override
 	public void start(Stage stage) {
@@ -30,22 +30,14 @@ public class Gui extends Application {
 	// ------------------------------------------------------------------------
 
 	private void drawShapes(GraphicsContext gc) {
-//		int x1 = 100; // start point: (x1,y1)
-//		int y1 = 200;
-//		int y2 = 10;
-//		gc.strokeLine(x1, y1, 20, y2);
-//		gc.strokeLine(x1, y1, 60, y2);
-//		gc.strokeLine(x1, y1, 100, y2);
-//		gc.strokeLine(x1, y1, 140, y2);
-//		gc.strokeLine(x1, y1, 180, y2);
-		int x1 = 20; // start point: (x1,y1)
-		int y1 = 190;
-		int x2 = 180; // end point: (x2,y2)
-		int y2 = 10;
-		while (x1 <= 180) {
-			gc.strokeLine(x1, y1, x2, y2);
-			x1 = x1 + 40;
-			x2 = x2 - 40;
+
+		int x = 100;
+		int y = 60;
+		int r = 20;
+		while (r <= 80) {
+			gc.strokeOval(x - r, y - r, 2 * r, 2 * r);
+			y += 10;
+			r += 10;
 		}
 	}
 

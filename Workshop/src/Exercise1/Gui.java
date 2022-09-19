@@ -1,4 +1,4 @@
-package eksempel2;
+package Exercise1;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -32,22 +32,10 @@ public class Gui extends Application
 
     // ------------------------------------------------------------------------
 
-    private void drawShapes(GraphicsContext gc)
-    {
-        // draw an arrowhead at (50,30)
-        int x = 50;
-        int y = 30;
-        gc.strokeLine(x, y, x + 20, y - 8);
-        gc.strokeLine(x, y, x + 20, y + 8);
+    private void drawShapes(GraphicsContext gc) {
 
-        // draw an arrowhead at (25,140)
-        x = 25;
-        y = 140;
-        gc.strokeLine(x, y, x + 20, y - 8);
-        gc.strokeLine(x, y, x + 20, y + 8);
-
-        x = 100;
-        y = 75;
+        int x = 100;
+        int y = 75;
         while (y <= 125) {
             gc.strokeLine(x, y ,x + 20, y - 8 );
             gc.strokeLine(x, y, x + 20, y + 8);
@@ -58,8 +46,6 @@ public class Gui extends Application
         y = 50;
         gc.strokeLine(x, y ,x + 20, y - 8 );
         gc.strokeLine(x, y, x + 20, y + 8);
-
-
     }
 
 }

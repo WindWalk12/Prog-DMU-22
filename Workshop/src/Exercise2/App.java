@@ -1,4 +1,4 @@
-package eksempel1;
+package Exercise2;
 
 import javafx.application.Application;
 
