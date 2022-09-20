@@ -2,6 +2,10 @@ package Exercise1;
 
 public class App {
 
+    public App() {
+
+    }
+
     public void printUnevenNumbers(int number) {
         for (int i = 1; i <= number; i++) {
             if (i%2 != 0) {
