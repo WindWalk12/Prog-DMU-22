@@ -41,37 +41,6 @@ public class App {
         System.out.println();
         System.out.println("d)");
 
-        maxRows = 5;
-        for (int i = 1; i <= maxRows; i++) {
-            for (int j = 4; j >= i; j--) {
-                System.out.print(" ");
-            }
-            for (int j = 1; j <= i; j++) {
-                if (j == 1) {
-                    System.out.print("*");
-                } else {
-                    System.out.print("**");
-                }
-            }
-            System.out.println();
-        }
-        for (int rows = 5; minRows <= rows ; rows--) {
-            for (int j = 5; j > rows; j--) {
-                System.out.print(" ");
-            }
-            for (int j = 1; j <= rows ; j++) {
-                if (j == 1) {
-                    System.out.print("*");
-                } else {
-                    System.out.print("**");
-                }
-            }
-            System.out.println();
-        }
-
-        System.out.println();
-        System.out.println("d) with only one asterisk");
-
         for (int i = 0; i < 10; i++) {
             if (i < 5) {
                 for (int j = 4; j > i; j--) {
