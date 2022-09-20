@@ -1,19 +1,23 @@
 package Exercise4;
 
 public class App {
-    public static void main(String[] args) {
-        System.out.println("a)");
+
+    public App() {
+
+    }
+
+    public void starsA() {
         int minRows = 1;
-        for (int rows = 10; minRows <= rows ; rows--) {
-            for (int j = 1; j <= rows ; j++) {
+        for (int rows = 10; minRows <= rows; rows--) {
+            for (int j = 1; j <= rows; j++) {
                 System.out.print("*");
             }
             System.out.println();
         }
+    }
 
-        System.out.println();
-        System.out.println("b)");
 
+    public void starsB() {
         int maxRows = 10;
         for (int i = 1; i <= maxRows; i++) {
             for (int j = 10; j > i; j--) {
@@ -24,23 +28,22 @@ public class App {
             }
             System.out.println();
         }
+    }
 
-        System.out.println();
-        System.out.println("c)");
-
-        for (int rows = 10; minRows <= rows ; rows--) {
+    public void starsC() {
+        int minRows = 1;
+        for (int rows = 10; minRows <= rows; rows--) {
             for (int j = 10; j > rows; j--) {
                 System.out.print(" ");
             }
-            for (int j = 1; j <= rows ; j++) {
+            for (int j = 1; j <= rows; j++) {
                 System.out.print("*");
             }
             System.out.println();
         }
+    }
 
-        System.out.println();
-        System.out.println("d)");
-
+    public void starsD() {
         for (int i = 0; i < 10; i++) {
             if (i < 5) {
                 for (int j = 4; j > i; j--) {
