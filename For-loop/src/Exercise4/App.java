@@ -6,9 +6,9 @@ public class App {
 
     }
 
-    public void starsA() {
+    public void starsA(int number) {
         int minRows = 1;
-        for (int rows = 10; minRows <= rows; rows--) {
+        for (int rows = number; minRows <= rows; rows--) {
             for (int j = 1; j <= rows; j++) {
                 System.out.print("*");
             }
@@ -17,9 +17,8 @@ public class App {
     }
 
 
-    public void starsB() {
-        int maxRows = 10;
-        for (int i = 1; i <= maxRows; i++) {
+    public void starsB(int number) {
+        for (int i = 1; i <= number; i++) {
             for (int j = 10; j > i; j--) {
                 System.out.print(" ");
             }
@@ -30,9 +29,9 @@ public class App {
         }
     }
 
-    public void starsC() {
+    public void starsC(int number) {
         int minRows = 1;
-        for (int rows = 10; minRows <= rows; rows--) {
+        for (int rows = number; minRows <= rows; rows--) {
             for (int j = 10; j > rows; j--) {
                 System.out.print(" ");
             }
@@ -43,10 +42,10 @@ public class App {
         }
     }
 
-    public void starsD() {
-        for (int i = 0; i < 10; i++) {
-            if (i < 5) {
-                for (int j = 4; j > i; j--) {
+    public void starsD(int number) {
+        for (int i = 0; i < number; i++) {
+            if (i < Math.ceil(((double)number/2))) {
+                for (int j = (int)Math.floor(((double)number/2)); j > i; j--) {
                     System.out.print(" ");
                 }
                 for (int j = 0; j <= i; j++) {
@@ -59,11 +58,11 @@ public class App {
                     }
                 }
             } else {
-                for (int j = 5; j < i; j++) {
+                for (int j = (int)Math.ceil(((double)number/2)) - 1; j < i; j++) {
                     System.out.print(" ");
                 }
-                for (int j = 10; j > i; j--) {
-                    if (j == 10) {
+                for (int j = number; j > i; j--) {
+                    if (j == number) {
                         System.out.print("*");
                     } else {
                         for (int k = 0; k < 2; k++) {

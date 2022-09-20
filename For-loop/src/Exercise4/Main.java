@@ -4,19 +4,19 @@ public class Main {
     public static void main(String[] args) {
         App a = new App();
         System.out.println("a)");
-        a.starsA();
+        a.starsA(10);
 
         System.out.println();
         System.out.println("b)");
-        a.starsB();
+        a.starsB(10);
 
         System.out.println();
         System.out.println("c)");
-        a.starsC();
+        a.starsC(10);
 
         System.out.println();
         System.out.println("d)");
-        a.starsD();
+        a.starsD(10);
 
 
     }
