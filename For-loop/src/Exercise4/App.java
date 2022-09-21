@@ -1,9 +1,9 @@
 package Exercise4;
 
 public class App {
-    public void starsA(int number) {
+    public void starsA(int n) {
         int minRows = 1;
-        for (int rows = number; minRows <= rows; rows--) {
+        for (int rows = n; minRows <= rows; rows--) {
             for (int j = 1; j <= rows; j++) {
                 System.out.print("*");
             }
@@ -12,8 +12,8 @@ public class App {
     }
 
 
-    public void starsB(int number) {
-        for (int i = 1; i <= number; i++) {
+    public void starsB(int n) {
+        for (int i = 1; i <= n; i++) {
             for (int j = 10; j > i; j--) {
                 System.out.print(" ");
             }
@@ -24,9 +24,9 @@ public class App {
         }
     }
 
-    public void starsC(int number) {
+    public void starsC(int n) {
         int minRows = 1;
-        for (int rows = number; minRows <= rows; rows--) {
+        for (int rows = n; minRows <= rows; rows--) {
             for (int j = 10; j > rows; j--) {
                 System.out.print(" ");
             }
@@ -37,10 +37,10 @@ public class App {
         }
     }
 
-    public void starsD(int number) {
-        for (int i = 0; i < number; i++) {
-            if (i < Math.ceil(((double)number/2))) {
-                for (int j = (int)Math.floor(((double)number/2)); j > i; j--) {
+    public void starsD(int n) {
+        for (int i = 0; i < n; i++) {
+            if (i < Math.ceil(((double)n/2))) {
+                for (int j = (int)Math.floor(((double)n/2)) - 1; j > i; j--) {
                     System.out.print(" ");
                 }
                 for (int j = 0; j <= i; j++) {
@@ -53,11 +53,11 @@ public class App {
                     }
                 }
             } else {
-                for (int j = (int)Math.ceil(((double)number/2)) - 1; j < i; j++) {
+                for (int j = (int)Math.ceil(((double)n/2)); j < i; j++) {
                     System.out.print(" ");
                 }
-                for (int j = number; j > i; j--) {
-                    if (j == number) {
+                for (int j = n; j > i; j--) {
+                    if (j == n) {
                         System.out.print("*");
                     } else {
                         for (int k = 0; k < 2; k++) {
