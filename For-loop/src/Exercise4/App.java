@@ -1,11 +1,6 @@
 package Exercise4;
 
 public class App {
-
-    public App() {
-
-    }
-
     public void starsA(int number) {
         int minRows = 1;
         for (int rows = number; minRows <= rows; rows--) {
