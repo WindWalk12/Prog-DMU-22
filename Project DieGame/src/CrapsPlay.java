@@ -10,6 +10,8 @@ public class CrapsPlay {
     private boolean won = false;
     private boolean thrown = false;
     private int winningNumber = 0;
+    private int countWin = 0;
+    private int countLoss = 0;
 
     public CrapsPlay() {
         die1 = new Die();
@@ -30,14 +32,36 @@ public class CrapsPlay {
         System.out.println("Velkommen til Craps spillet");
     }
 
+    public void resetGame() {
+        this.finished = false;
+        this.won = false;
+        this.winningNumber = 0;
+        this.thrown = false;
+        this.countThrown = 0;
+    }
+
     public void gameOver() {
         if (this.won) {
             System.out.println("Du har vundet");
+            countWin++;
         }
         else {
             System.out.println("Du har tabt");
+            countLoss++;
         }
-        scan.close();
+        System.out.println();
+        System.out.print("Vil du spille igen? Angiv Ja eller Nej: ");
+        String startAgain = scan.nextLine();
+        if (startAgain.equalsIgnoreCase("Ja")) {
+            System.out.println("Starter nyt spil");
+            System.out.println();
+            resetGame();
+            startGame();
+        } else {
+            System.out.println();
+            System.out.println("Du har vundet " + countWin + " og tabt " + countLoss);
+            scan.close();
+        }
     }
 
     private void takeTurn() {
