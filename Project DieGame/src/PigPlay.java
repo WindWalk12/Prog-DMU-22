@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class PigPlay {
 
     private Die die1;
-    private Die die2;
     private Scanner scan;
     private boolean finished = false;
     private boolean player1Won = false;
