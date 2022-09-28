@@ -5,7 +5,6 @@ public class CrapsPlay {
     private Die die1;
     private Die die2;
     private Scanner scan;
-    private int countThrown = 0;
     private boolean finished = false;
     private boolean won = false;
     private boolean thrown = false;
@@ -37,7 +36,6 @@ public class CrapsPlay {
         this.won = false;
         this.winningNumber = 0;
         this.thrown = false;
-        this.countThrown = 0;
     }
 
     public void gameOver() {
@@ -71,23 +69,22 @@ public class CrapsPlay {
         if (!thrown && (sumOfDices() == 7 || sumOfDices() == 11)) {
             this.finished = true;
             this.won = true;
-        }
-        else if (sumOfDices() == 2 || sumOfDices() == 3 || sumOfDices() == 12) {
+        } else if (!this.thrown && (sumOfDices() == 2 || sumOfDices() == 3 || sumOfDices() == 12)) {
             this.finished = true;
-        }
-        else if (this.thrown && sumOfDices() == this.winningNumber) {
+        } else if (this.thrown && sumOfDices() == this.winningNumber) {
             this.finished = true;
             this.won = true;
+        } else if (this.thrown && sumOfDices() == 7) {
+            this.finished = true;
         } else if (!this.thrown) {
             this.winningNumber = sumOfDices();
             this.thrown = true;
         }
-        this.countThrown++;
     }
 
     public void startGame() {
         welcomeToGame();
-        while (!this.finished || this.countThrown == 7) {
+        while (!this.finished) {
             System.out.print("Vil du kaste en terning? Angiv Ja eller Nej: ");
             String goOn = scan.nextLine();
             if (goOn.equalsIgnoreCase("Nej")) {
