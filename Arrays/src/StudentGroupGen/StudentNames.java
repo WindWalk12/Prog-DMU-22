@@ -1,58 +1,53 @@
 package StudentGroupGen;
 
+import java.util.Random;
+
 public class StudentNames {
     public int groupSize;
     private String groups[][];
-    private int count = 0;
 
     public StudentNames(int groupSize) {
         this.groupSize = groupSize;
-        groups = new String[groupSize][(int)Math.ceil(mNames.length/groupSize)];
+        groups = new String[groupSize][(int)Math.ceil(mNames.length / (float)groupSize)];
     }
 
     private static String[] mNames = {"Adam", "Amin", "Andreas", "Anton", "Christian Rosendal",
-                       "Christian Skræddergaard", "Elias", "Jacob Gram",
-                       "Jakob Noermark", "Jeppe", "John", "Kamilla", "Kasper",
-                       "Lasse Calvillo", "Lasse Kirkegaard", "Louise",
-                       "Lucas", "Lucas Holm", "Mads Ilsø", "Mads Overgaard",
-                       "Maksym", "Mathias", "Mikkel Hess", "Mikkel Lindhøj",
-                       "Niclas", "Olga", "Oliver Lochert", "Oliver Rosenquist",
-                       "Peter", "Rasmus", "Silas", "Simon", "Tayylp", "Tobias"};
+            "Christian Skræddergaard", "Elias", "Jacob Gram",
+            "Jakob Noermark", "Jeppe", "John", "Kamilla", "Kasper",
+            "Lasse Calvillo", "Lasse Kirkegaard", "Louise",
+            "Lucas", "Lucas Holm", "Mads Ilsø", "Mads Overgaard",
+            "Maksym", "Mathias", "Mikkel Hess", "Mikkel Lindhøj",
+            "Niclas", "Olga", "Oliver Lochert", "Oliver Rosenquist",
+            "Peter", "Rasmus", "Silas", "Simon", "Tayylp", "Tobias"};
 
-    public static String[] getNames() { return mNames; }
-
-    public void genGroups() {
-        for (int i = 0; i < mNames.length; i++) {
-            groups[(int)Math.floor(Math.random()*5)][(int)Math.floor(Math.random()*(mNames.length/groupSize))] = mNames[(int)Math.floor(Math.random()*33)];
-        }
+    public static String[] getNames() {
+        return mNames;
     }
 
-    public void genGroups2() {
-        findNotNull();
-        while (count > 0) {
-            for (int i = 0; i < groups.length; i++) {
-                for (int j = 0; j < groups[i].length; j++) {
-                    int element = (int) Math.floor(Math.random() * 33);
-                    if (mNames[element] != null) {
-                        groups[i][j] = mNames[element];
-                        mNames[element] = null;
-                    }
-                    findNotNull();
+    public void genGroups() {
+        shuffleArraay();
+        int k = 0;
+        for (int i = 0; i < groups.length; i++) {
+            for (int j = 0; j < groups[i].length; j++) {
+                if (k < mNames.length) {
+                    groups[i][j] = mNames[k];
+                    k++;
                 }
             }
         }
+        printGroups();
     }
 
-    public int findNotNull(){
-        this.count = 0;
+    public void shuffleArraay() {
+        Random rand = new Random();
         for (int i = 0; i < mNames.length; i++) {
-            if (mNames[i] != null) {
-                this.count++;
-            }
+            int randomIndex = rand.nextInt(mNames.length);
+            String temp = mNames[randomIndex];
+            mNames[randomIndex] = mNames[i];
+            mNames[i] = temp;
         }
-        return this.count;
     }
-    
+
     public void printGroups() {
         for (int i = 0; i < groups.length; i++) {
             System.out.print("Gruppe " + (i + 1) + ": ");
@@ -62,5 +57,4 @@ public class StudentNames {
             System.out.println();
         }
     }
-
 }

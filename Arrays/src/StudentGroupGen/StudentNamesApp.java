@@ -1,10 +1,11 @@
 package StudentGroupGen;
 
+import java.util.Arrays;
+import java.util.Random;
+
 public class StudentNamesApp {
     public static void main(String[] args) {
         StudentNames s = new StudentNames(5);
-        s.genGroups2();
-        s.printGroups();
-        System.out.println(s.findNotNull());
+        s.genGroups();
     }
 }
