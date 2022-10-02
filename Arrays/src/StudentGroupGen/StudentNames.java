@@ -3,12 +3,10 @@ package StudentGroupGen;
 import java.util.Random;
 
 public class StudentNames {
-    public int groupSize;
     private String groups[][];
 
-    public StudentNames(int groupSize) {
-        this.groupSize = groupSize;
-        groups = new String[groupSize][(int)Math.ceil(mNames.length / (float)groupSize)];
+    public StudentNames(int numberOfGroups) {
+        groups = new String[numberOfGroups][(int)Math.ceil(mNames.length / (float)numberOfGroups)];
     }
 
     private static String[] mNames = {"Adam", "Amin", "Andreas", "Anton", "Christian Rosendal",
@@ -28,9 +26,9 @@ public class StudentNames {
         shuffleArraay();
         int k = 0;
         for (int i = 0; i < groups.length; i++) {
-            for (int j = 0; j < groups[i].length; j++) {
+            for (int j = 0; j < groups.length; j++) {
                 if (k < mNames.length) {
-                    groups[i][j] = mNames[k];
+                    groups[j][i] = mNames[k];
                     k++;
                 }
             }
@@ -52,7 +50,9 @@ public class StudentNames {
         for (int i = 0; i < groups.length; i++) {
             System.out.print("Gruppe " + (i + 1) + ": ");
             for (int j = 0; j < groups[i].length; j++) {
-                System.out.print(" " + groups[i][j] + ", ");
+                if (groups[i][j] != null) {
+                    System.out.print(" " + groups[i][j] + ", ");
+                }
             }
             System.out.println();
         }
