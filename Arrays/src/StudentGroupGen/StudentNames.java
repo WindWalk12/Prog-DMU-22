@@ -25,7 +25,7 @@ public class StudentNames {
     public void genGroups() {
         shuffleArray();
         int k = 0;
-        for (int i = 0; i < groups.length; i++) {
+        for (int i = 0; i < groups[0].length; i++) {
             for (int j = 0; j < groups.length; j++) {
                 if (k < mNames.length) {
                     groups[j][i] = mNames[k];
