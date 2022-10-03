@@ -23,7 +23,7 @@ public class StudentNames {
     }
 
     public void genGroups() {
-        shuffleArraay();
+        shuffleArray();
         int k = 0;
         for (int i = 0; i < groups.length; i++) {
             for (int j = 0; j < groups.length; j++) {
@@ -36,7 +36,7 @@ public class StudentNames {
         printGroups();
     }
 
-    public void shuffleArraay() {
+    public void shuffleArray() {
         Random rand = new Random();
         for (int i = 0; i < mNames.length; i++) {
             int randomIndex = rand.nextInt(mNames.length);
