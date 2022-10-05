@@ -65,7 +65,7 @@ public class TicTacToeLogic {
             }
         }
         //Checking if someone has won in the diagonal position starting from 0-0 to 2-2
-        //else if checking if someone has won in the diagonal position starting from 0-2 to 2-0
+        //else if: checking if someone has won in the diagonal position starting from 0-2 to 2-0
         if (fields[1][1] != 0) {
             int compare = fields[1][1];
             if (fields[0][0] == compare && fields[2][2] == compare) {
