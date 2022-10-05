@@ -26,7 +26,9 @@ public class TicTacToeLogic {
      * @param col is the y-coordinate of the field. Must be in 0..size-1
      */
     public void set(int row, int col) {
+        //Puts the current player info into the 2d array based on which tile the player clicks
         fields[row][col] = mCurrentPlayer;
+
         mCurrentPlayer = 3 - mCurrentPlayer;
         usedFields++;
     }
@@ -63,7 +65,7 @@ public class TicTacToeLogic {
             }
         }
         //Checking if someone has won in the diagonal position starting from 0-0 to 2-2
-        //Checking if someone has won in the diagonal position starting from 0-2 to 2-0
+        //else if checking if someone has won in the diagonal position starting from 0-2 to 2-0
         if (fields[1][1] != 0) {
             int compare = fields[1][1];
             if (fields[0][0] == compare && fields[2][2] == compare) {
