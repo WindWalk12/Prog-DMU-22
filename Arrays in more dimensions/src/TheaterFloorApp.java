@@ -1,13 +1,11 @@
-import javax.sound.midi.Soundbank;
 import java.util.Scanner;
 
 public class TheaterFloorApp {
-    private static Scanner scan;
 
     public static void main(String[] args) {
-        scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         TheaterFloor t = new TheaterFloor();
-        System.out.println("Do you want to buy from a price or by seat? price : seat");
+        System.out.println("Do you want to buy from a price or by a seat? price : seat");
         String answer = scan.next();
         if (answer.equalsIgnoreCase("price")) {
             System.out.println("At which price? It ranges from 10..20..50");
