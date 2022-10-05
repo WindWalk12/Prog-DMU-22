@@ -36,23 +36,23 @@ public class TheaterFloor {
     }
 
     public void print() {
-        System.out.print("   Seat : ");
+        System.out.print("Seat  :");
         for (int i = 0; i < seats[0].length; i++) {
-            System.out.print((i + 1) + "   ");
+            System.out.printf("%5d", i + 1);
         }
         System.out.println();
-        System.out.print("          --------------------------------------");
+        System.out.print("          -----------------------------------------------");
         for (int i = 0; i < seats.length; i++) {
             System.out.println();
-            System.out.print("Row   " + (i + 1) + " : ");
+            System.out.print("Row " + (i + 1) + " : ");
             for (int j = 0; j < seats[i].length; j++) {
                 if (seats[i][j] > -1) {
-                    System.out.print(seats[i][j]);
+                    System.out.printf("%4d",seats[i][j]);
                     if (j < seats[i].length - 1) {
-                        System.out.print(", ");
+                        System.out.print(",");
                     }
                 } else {
-                    System.out.print( "--, ");
+                    System.out.print( "--,");
                 }
             }
         }
