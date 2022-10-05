@@ -7,13 +7,12 @@ public class TheaterFloorApp {
     public static void main(String[] args) {
         scan = new Scanner(System.in);
         TheaterFloor t = new TheaterFloor();
-        t.populate();
         System.out.println("Do you want to buy from a price or by seat? price : seat");
         String answer = scan.next();
         if (answer.equalsIgnoreCase("price")) {
-            System.out.println("At which price? It ranges from 10..20..30..90");
+            System.out.println("At which price? It ranges from 10..20..50");
             int price = scan.nextInt();
-            if (price >= 10 && price <= 90 && price % 10 == 0) {
+            if (price >= 0 && price <= 50) {
                 if (t.buySeat(price)) {
                     System.out.println("Seat is bought");
                 } else {
