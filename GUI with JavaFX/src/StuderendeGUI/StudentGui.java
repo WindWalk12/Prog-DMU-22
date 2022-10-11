@@ -27,6 +27,7 @@ public class StudentGui extends Application {
 	// -------------------------------------------------------------------------
 
 	private final TextField txfName = new TextField();
+	private final TextField txfAge = new TextField();
 	private final CheckBox chkActive = new CheckBox();
 	private final TextArea txAInf = new TextArea();
 
@@ -34,6 +35,7 @@ public class StudentGui extends Application {
 	private final Button btnSave = new Button("Gem");
 	private final Button btnGet = new Button("Hent");
 	private final Button btnDelete = new Button("Slet");
+	private final Button btnBithday = new Button("Fødselsdag");
 
 	private Student studerende = null;
 
@@ -55,10 +57,13 @@ public class StudentGui extends Application {
 
 		Label lblName = new Label("Navn");
 		pane.add(lblName, 0, 1);
+		Label lblAge = new Label("Alder");
+		pane.add(lblAge, 0, 2);
 		Label lblActive = new Label("Aktiv");
 		pane.add(lblActive, 0, 3);
 
 		pane.add(txfName, 1, 1, 4, 1);
+		pane.add(txfAge, 1, 2, 2, 1);
 
 		pane.add(chkActive, 1, 3);
 
@@ -75,22 +80,27 @@ public class StudentGui extends Application {
 		pane.add(btnDelete, 3, 5);
 		btnDelete.setDisable(true);
 
+		btnBithday.setDisable(true);
+		pane.add(btnBithday, 3,2);
+
 		// connect a method to the button
 
 		btnAdd.setOnAction(event -> this.addAction());
 		btnSave.setOnAction(event -> this.saveAction());
 		btnGet.setOnAction(event -> this.getAction());
 		btnDelete.setOnAction(event -> this.deleteAction());
+		btnBithday.setOnAction(event -> this.increaseAge());
 
 	}
 
 	private void addAction() {
 		if (studerende == null) {
-			studerende = new Student(txfName.getText().trim(), 20, chkActive.isSelected());
+			studerende = new Student(txfName.getText().trim(), Integer.parseInt(txfAge.getText()), chkActive.isSelected());
 			clearFields();
 			txAInf.setText(getDescription());
 			btnGet.setDisable(false);
 			btnAdd.setDisable(true);
+			btnBithday.setDisable(false);
 
 		}
 
@@ -100,6 +110,7 @@ public class StudentGui extends Application {
 		if (studerende != null) {
 			studerende.setName(txfName.getText().trim());
 			studerende.setActive(chkActive.isSelected());
+			studerende.setAge(Integer.parseInt(txfAge.getText()));
 			clearFields();
 			txAInf.setText(getDescription());
 			btnSave.setDisable(true);
@@ -113,6 +124,7 @@ public class StudentGui extends Application {
 	private void getAction() {
 		if (studerende != null) {
 			txfName.setText(studerende.getName());
+			txfAge.setText(String.valueOf(studerende.getAge()));
 			chkActive.setSelected(studerende.isActive());
 			txAInf.setText(getDescription());
 			btnSave.setDisable(false);
@@ -132,6 +144,7 @@ public class StudentGui extends Application {
 			btnSave.setDisable(true);
 			btnGet.setDisable(true);
 			btnAdd.setDisable(false);
+			btnBithday.setDisable(true);
 
 		}
 
@@ -139,6 +152,7 @@ public class StudentGui extends Application {
 
 	private void clearFields() {
 		txfName.clear();
+		txfAge.clear();
 		chkActive.setSelected(false);
 	}
 
@@ -148,6 +162,12 @@ public class StudentGui extends Application {
 			result = studerende.toString();
 		}
 		return result;
+	}
+
+	private void increaseAge() {
+		int age = studerende.getAge();
+		age++;
+		studerende.setAge(age);
 	}
 
 }
