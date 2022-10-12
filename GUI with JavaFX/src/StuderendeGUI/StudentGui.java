@@ -89,7 +89,7 @@ public class StudentGui extends Application {
 		btnSave.setOnAction(event -> this.saveAction());
 		btnGet.setOnAction(event -> this.getAction());
 		btnDelete.setOnAction(event -> this.deleteAction());
-		btnBithday.setOnAction(event -> this.increaseAge());
+		btnBithday.setOnAction(event -> this.birthday());
 
 	}
 
@@ -164,10 +164,9 @@ public class StudentGui extends Application {
 		return result;
 	}
 
-	private void increaseAge() {
-		int age = studerende.getAge();
-		age++;
-		studerende.setAge(age);
+	private void birthday() {
+		studerende.increaseAge();
+		txAInf.setText(getDescription());
 	}
 
 }
