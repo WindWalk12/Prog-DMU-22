@@ -166,7 +166,6 @@ public class StudentGui extends Application {
 
 	private void birthday() {
 		studerende.increaseAge();
-		int i;
 		txAInf.setText(getDescription());
 	}
 
