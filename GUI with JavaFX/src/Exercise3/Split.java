@@ -47,10 +47,10 @@ public class Split extends Application {
 
         pane.add(btnSplit, 0,2);
 
-        btnSplit.setOnAction(event -> this.combine());
+        btnSplit.setOnAction(event -> this.split());
     }
 
-    private void combine() {
+    private void split() {
         if (txtSplit != null) {
             String[] split = txtSplit.getText().split(" ");
             txtName.setText(split[0]);
