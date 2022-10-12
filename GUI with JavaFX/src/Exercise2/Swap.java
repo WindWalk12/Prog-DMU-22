@@ -46,7 +46,7 @@ public class Swap extends Application {
     }
 
     private void swap() {
-        if (txtfield1 != null && txtfield2 != null) {
+        if (txtfield1.getText().trim().isEmpty() && txtfield2.getText().trim().isEmpty()) {
             String temp = txtfield2.getText();
             txtfield2.setText(txtfield1.getText());
             txtfield1.setText(temp);

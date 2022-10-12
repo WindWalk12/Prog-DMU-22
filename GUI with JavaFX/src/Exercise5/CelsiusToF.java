@@ -55,14 +55,18 @@ public class CelsiusToF extends Application {
     }
 
     private void calcFehrenheit() {
-        double c = Double.parseDouble(txtCelsius.getText());
-        double f = (c * 9.0/5.0) + 32.0;;
-        txtFahrenheit.setText(String.valueOf(f));
+        if (txtCelsius.getText().trim().isEmpty()) {
+            double c = Double.parseDouble(txtCelsius.getText());
+            double f = (c * 9.0 / 5.0) + 32.0;
+            txtFahrenheit.setText(String.valueOf(f));
+        }
     }
 
     private void calcCelsius() {
-        double f = Double.parseDouble(txtFahrenheit.getText());
-        double c = (f - 32.0) * 5.0/9.0;
-        txtCelsius.setText(String.valueOf(c));
+        if (txtFahrenheit.getText().trim().isEmpty()) {
+            double f = Double.parseDouble(txtFahrenheit.getText());
+            double c = (f - 32.0) * 5.0 / 9.0;
+            txtCelsius.setText(String.valueOf(c));
+        }
     }
 }

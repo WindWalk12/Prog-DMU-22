@@ -51,7 +51,7 @@ public class Combine extends Application {
     }
 
     private void combine() {
-        if (txtName != null && txtLastname != null) {
+        if (txtName.getText().trim().isEmpty() && txtLastname.getText().trim().isEmpty()) {
             String combined = txtName.getText() + " " + txtLastname.getText();
             txtCombined.setText(combined);
         }

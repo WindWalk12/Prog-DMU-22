@@ -51,7 +51,7 @@ public class Split extends Application {
     }
 
     private void split() {
-        if (txtSplit != null) {
+        if (txtSplit.getText().trim().isEmpty()) {
             String[] split = txtSplit.getText().split(" ");
             txtName.setText(split[0]);
             txtLastname.setText(split[1]);
