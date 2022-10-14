@@ -16,7 +16,7 @@ public class Gui extends Application {
   
     @Override
     public void start(Stage stage) {
-        stage.setTitle("ListView Demo3");
+        stage.setTitle("Person administration");
         GridPane pane = new GridPane();
         this.initContent(pane);
 
