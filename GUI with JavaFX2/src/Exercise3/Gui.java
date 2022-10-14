@@ -1,13 +1,10 @@
 package Exercise3;
 
 import javafx.application.Application;
-import javafx.beans.value.ChangeListener;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import java.util.ArrayList;
@@ -48,14 +45,14 @@ public class Gui extends Application {
         Button btnAddPerson = new Button("Add person");
         pane.add(btnAddPerson, 6, 2);
         GridPane.setMargin(btnAddPerson, new Insets(10, 10, 0, 10));
-        btnAddPerson.setOnAction(event -> this.createMovieAction());
+        btnAddPerson.setOnAction(event -> this.addPerson());
 
     }
 
     // -----------------------------------------------------
     // Button action
 
-    private void createMovieAction() {
+    private void addPerson() {
         addPersonWindow.showAndWait();
 
         // wait for the dialog to close ...
