@@ -94,9 +94,9 @@ public class addPersonInputWindow extends Stage {
             addPersonInputWindow.this.hide();
         } else {
             Alert alert = new Alert(AlertType.INFORMATION);
-            alert.setTitle("Create movie");
+            alert.setTitle("Create person");
             alert.setHeaderText("Information missing");
-            alert.setContentText("Type title and actor");
+            alert.setContentText("Type name and title");
             alert.show();
         }
     }
