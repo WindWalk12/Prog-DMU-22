@@ -54,9 +54,7 @@ public class Swimmer {
         double worstTime = 0;
         double avgTimesWithoutWorst = 0;
         for (Double d :times) {
-            if (worstTime == 0) {
-                worstTime = d;
-            } else if (d < worstTime) {
+            if (d > worstTime) {
                 worstTime = d;
             }
             avgTimesWithoutWorst += d;
