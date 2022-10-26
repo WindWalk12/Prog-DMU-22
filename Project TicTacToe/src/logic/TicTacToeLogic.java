@@ -50,17 +50,21 @@ public class TicTacToeLogic {
     public int anyWinner() {
         //Checking if someone has won in the vertical positions
         for (int i = 0; i < fields.length; i++) {
-            for (int j = 0; j < fields[i].length; j++) {
-                if (fields[i][0] == fields[i][1] && fields[i][1] == fields[i][2] && fields[i][j] != 0) {
+            if (fields[i][0] == fields[i][1] && fields[i][1] == fields[i][2] && fields[i][1] != 0) {
+                if (mCurrentPlayer == 1) {
                     return 1;
+                } else {
+                    return 2;
                 }
             }
         }
         //Checking if someone has won in the horizontal positions
         for (int i = 0; i < fields.length; i++) {
-            for (int j = 0; j < fields[i].length; j++) {
-                if (fields[0][i] == fields[1][i] && fields[1][i] == fields[2][i] && fields[j][i] != 0) {
+            if (fields[0][i] == fields[1][i] && fields[1][i] == fields[2][i] && fields[1][i] != 0) {
+                if (mCurrentPlayer == 1) {
                     return 1;
+                } else {
+                    return 2;
                 }
             }
         }
@@ -69,9 +73,17 @@ public class TicTacToeLogic {
         if (fields[1][1] != 0) {
             int compare = fields[1][1];
             if (fields[0][0] == compare && fields[2][2] == compare) {
-                return 1;
+                if (mCurrentPlayer == 1) {
+                    return 1;
+                } else {
+                    return 2;
+                }
             } else if (fields[0][2] == compare && fields[2][0] == compare) {
-                return 1;
+                if (mCurrentPlayer == 1) {
+                    return 1;
+                } else {
+                    return 2;
+                }
             }
         }
 
