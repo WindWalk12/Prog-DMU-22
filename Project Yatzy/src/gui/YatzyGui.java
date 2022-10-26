@@ -181,7 +181,9 @@ public class YatzyGui extends Application {
 
         int[] results = yatzy.getResults();
         for (int i = 0; i < txfResults.length; i++) {
-            txfResults[i].setText(String.valueOf(results[i]));
+            if (!txfResults[i].isDisable()) {
+                txfResults[i].setText(String.valueOf(results[i]));
+            }
         }
     }
 
