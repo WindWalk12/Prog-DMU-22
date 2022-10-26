@@ -13,9 +13,14 @@ public class Yatzy {
 
 	// Random number generator.
 	private Random random = new Random();
+	private int totalScore;
+	private int sumLower;
+	private int sumUpper;
 
 	public Yatzy() {
-		//
+		totalScore = 0;
+		sumLower = 0;
+		sumUpper = 0;
 	}
 
 	/**
@@ -48,6 +53,30 @@ public class Yatzy {
 		throwCount = 0;
 	}
 
+	public int getTotalScore() {
+		return totalScore;
+	}
+
+	public void addTotalScore(int totalScore) {
+		this.totalScore += totalScore;
+	}
+
+	public int getSumLower() {
+		return sumLower;
+	}
+
+	public void addSumLower(int sumLower) {
+		this.sumLower += sumLower;
+	}
+
+	public int getSumUpper() {
+		return sumUpper;
+	}
+
+	public void addSumUpper(int sumUpper) {
+		this.sumUpper += sumUpper;
+	}
+
 	/**
 	 * Rolls the 5 dice. Only roll dice that are not hold. Pre: holds contain 5
 	 * boolean values.
@@ -55,7 +84,7 @@ public class Yatzy {
 	public void throwDice(boolean[] holds) {
 		for (int i = 0; i < values.length; i++) {
 			if (!holds[i]) {
-				values[i] = random.nextInt(6);
+				values[i] = random.nextInt(6) + 1;
 			}
 		}
 		throwCount++;
