@@ -6,20 +6,21 @@ public class Rental {
     private int number;
     private int days;
     private String date;
-    private ArrayList<Car> rentals = new ArrayList<>();
+    private ArrayList<Car> cars;
 
     public Rental(int number, int days, String date) {
         this.number = number;
         this.days = days;
         this.date = date;
+        this.cars = new ArrayList<>();
     }
 
     public double getPrice() {
         double allPrices = 0;
-        for (Car c : rentals) {
+        for (Car c : cars) {
             allPrices += c.getPricePerDay();
         }
-        return allPrices / this.days;
+        return allPrices * this.days;
     }
 
     public void setDays(int days) {
@@ -31,8 +32,8 @@ public class Rental {
     }
 
     public void addCar(Car c) {
-        if (!rentals.contains(c)) {
-            rentals.add(c);
+        if (!cars.contains(c)) {
+            cars.add(c);
         }
     }
 }
