@@ -55,9 +55,7 @@ public class TrainingPlan {
 	}
 
 	public void removeSwimmer(Swimmer s) {
-		if (swimmers.contains(s)) {
 			swimmers.remove(s);
-		}
 	}
 
 	public ArrayList<Swimmer> getSwimmers() {
