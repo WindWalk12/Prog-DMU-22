@@ -5,12 +5,11 @@ import java.util.ArrayList;
 public class Series {
     private String title;
     private ArrayList<String> cast;
-    private ArrayList<Episode> episodes;
+    private ArrayList<Episode> episodes = new ArrayList<>();
 
     public Series(String title, ArrayList<String> cast) {
         this.title = title;
         this.cast = cast;
-        this.episodes = new ArrayList<>();
     }
 
     public String getTitle() {
