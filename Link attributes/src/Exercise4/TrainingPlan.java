@@ -55,7 +55,7 @@ public class TrainingPlan {
 	}
 
 	public void removeSwimmer(Swimmer s) {
-			swimmers.remove(s);
+		swimmers.remove(s);
 	}
 
 	public ArrayList<Swimmer> getSwimmers() {

@@ -42,7 +42,7 @@ public class SwimmerApp {
         }
 
         for (Swimmer s: t.getSwimmers()) {
-            if (s.getName() == "Mikkel") {
+            if (s.getName().equals("Mikkel")) {
                 t.removeSwimmer(s);
             }
         }
