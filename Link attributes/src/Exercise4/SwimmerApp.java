@@ -41,11 +41,7 @@ public class SwimmerApp {
             System.out.println(s.getName() + " er medlem af " + s.getClub() + " og er medlem af træningsplanen");
         }
 
-        for (Swimmer s: t.getSwimmers()) {
-            if (s.getName().equals("Mikkel")) {
-                t.removeSwimmer(s);
-            }
-        }
+        t.removeSwimmer("Mikkel", "AIA-Tranbjerg");
 
         System.out.println();
         for (Swimmer s: t.getSwimmers()) {

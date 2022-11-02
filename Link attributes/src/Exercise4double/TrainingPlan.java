@@ -1,4 +1,4 @@
-package Exercise4;
+package Exercise4double;
 
 import java.util.ArrayList;
 
@@ -42,8 +42,8 @@ public class TrainingPlan {
 		this.weeklyWaterHours = weeklyWaterHours;
 	}
 
-	public Swimmer createSwimmer(String name, int yearGroup, ArrayList<Double> lapTimes, String club) {
-		Swimmer s = new Swimmer(name, yearGroup, lapTimes, club);
+	public Swimmer createSwimmer(String name, int yearGroup, ArrayList<Double> lapTimes, String club, TrainingPlan tPlan) {
+		Swimmer s = new Swimmer(name, yearGroup, lapTimes, club, tPlan);
 		swimmers.add(s);
 		return s;
 	}
@@ -51,6 +51,7 @@ public class TrainingPlan {
 	public void addSwimmer(Swimmer s) {
 		if (!swimmers.contains(s)) {
 			swimmers.add(s);
+			s.setTPlan(this);
 		}
 	}
 
@@ -65,6 +66,15 @@ public class TrainingPlan {
 
 	public ArrayList<Swimmer> getSwimmers() {
 		return new ArrayList<>(swimmers);
+	}
+
+	public Swimmer getSwimmer(String name, String club) {
+		for (var s :swimmers) {
+			if (s.getName().equals(name) && s.getClub().equals(club)) {
+				return s;
+			}
+		}
+		return null;
 	}
 	
 }
