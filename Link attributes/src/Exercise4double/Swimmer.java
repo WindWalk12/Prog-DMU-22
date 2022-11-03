@@ -22,7 +22,6 @@ public class Swimmer {
        this.lapTimes = lapTimes;
        this.club = club;
        this.tPlan = tPlan;
-       //tPlan.addSwimmer(this);
    }
     /**
      * Return the name of the swimmer

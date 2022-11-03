@@ -70,14 +70,6 @@ public class SwimmerApp {
         for (Swimmer s: t2.getSwimmers()) {
             System.out.println(s.getName() + " er medlem af " + s.getClub() + " og er medlem af træningsplanen " + s.gettPlan().getLevel());
         }
-
-
-        /*t1.removeSwimmer("Mikkel", "AIA-Tranbjerg");
-
-        System.out.println();
-        for (Swimmer s: t1.getSwimmers()) {
-            System.out.println(s.getName() + " er medlem af " + s.getClub() + " og er medlem af træningsplanen");
-        }*/
     }
     
 }
