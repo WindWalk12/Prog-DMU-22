@@ -40,21 +40,21 @@ public class SwimmerApp {
 
         System.out.println("Træningsplan A");
         for (Swimmer s: t1.getSwimmers()) {
-            System.out.println(s.getName() + " er medlem af " + s.getClub() + " og er medlem af træningsplanen " + s.gettPlan().getLevel());
+            System.out.println(s.getName() + " er medlem af " + s.getClub() + " og er medlem af træningsplanen " + s.getTPlan().getLevel());
         }
         System.out.println();
 
         System.out.println("Træningsplan B");
         for (Swimmer s: t2.getSwimmers()) {
-            System.out.println(s.getName() + " er medlem af " + s.getClub() + " og er medlem af træningsplanen " + s.gettPlan().getLevel());
+            System.out.println(s.getName() + " er medlem af " + s.getClub() + " og er medlem af træningsplanen " + s.getTPlan().getLevel());
         }
         System.out.println();
 
-        t2.getSwimmer("Mikkel", "AIA-Tranbjerg").setTPlan(t1);
+        t2.getSwimmer("Mikkel", "AIA-Tranbjerg").addTPlan(t1);
 
         System.out.println("Træningsplan A");
         for (Swimmer s: t1.getSwimmers()) {
-            System.out.println(s.getName() + " er medlem af " + s.getClub() + " og er medlem af træningsplanen " + s.gettPlan().getLevel());
+            System.out.println(s.getName() + " er medlem af " + s.getClub() + " og er medlem af træningsplanen " + s.getTPlan().getLevel());
         }
         System.out.println();
 
@@ -62,13 +62,13 @@ public class SwimmerApp {
 
         System.out.println("Træningsplan A");
         for (Swimmer s: t1.getSwimmers()) {
-            System.out.println(s.getName() + " er medlem af " + s.getClub() + " og er medlem af træningsplanen " + s.gettPlan().getLevel());
+            System.out.println(s.getName() + " er medlem af " + s.getClub() + " og er medlem af træningsplanen " + s.getTPlan().getLevel());
         }
         System.out.println();
 
         System.out.println("Træningsplan B");
         for (Swimmer s: t2.getSwimmers()) {
-            System.out.println(s.getName() + " er medlem af " + s.getClub() + " og er medlem af træningsplanen " + s.gettPlan().getLevel());
+            System.out.println(s.getName() + " er medlem af " + s.getClub() + " og er medlem af træningsplanen " + s.getTPlan().getLevel());
         }
     }
     

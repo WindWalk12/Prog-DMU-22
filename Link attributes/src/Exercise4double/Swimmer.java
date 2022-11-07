@@ -44,11 +44,11 @@ public class Swimmer {
         return this.club;
     }
 
-    public TrainingPlan gettPlan() {
+    public TrainingPlan getTPlan() {
         return this.tPlan;
     }
 
-    public void setTPlan(TrainingPlan t) {
+    public void addTPlan(TrainingPlan t) {
         if (this.tPlan != t) {
             tPlan.removeSwimmer(this.name, this.club);
             tPlan = t;

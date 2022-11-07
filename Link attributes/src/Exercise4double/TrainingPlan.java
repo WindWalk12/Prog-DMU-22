@@ -51,7 +51,7 @@ public class TrainingPlan {
 	public void addSwimmer(Swimmer s) {
 		if (!swimmers.contains(s)) {
 			swimmers.add(s);
-			s.setTPlan(this);
+			s.addTPlan(this);
 		}
 	}
 
