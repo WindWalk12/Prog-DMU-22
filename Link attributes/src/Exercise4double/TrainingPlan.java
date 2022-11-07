@@ -56,7 +56,7 @@ public class TrainingPlan {
 	}
 
 	public void removeSwimmer(String name, String club) {
-		for (var s :swimmers) {
+		for (Swimmer s :swimmers) {
 			if (s.getName().equals(name) && s.getClub().equals(club)) {
 				swimmers.remove(s);
 				break;
@@ -69,7 +69,7 @@ public class TrainingPlan {
 	}
 
 	public Swimmer getSwimmer(String name, String club) {
-		for (var s :swimmers) {
+		for (Swimmer s :swimmers) {
 			if (s.getName().equals(name) && s.getClub().equals(club)) {
 				return s;
 			}
