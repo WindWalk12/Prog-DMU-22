@@ -2,11 +2,15 @@ package Exercise1.Gui;
 
 import Exercise1.Application.Controller.CustomerController;
 import Exercise1.Application.Model.Customer;
+import Exercise1.Storage.CustomerStorage;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class CompanyPane extends GridPane {
 	private ListView<Customer> lvwCompanies;
@@ -49,6 +53,7 @@ public class CompanyPane extends GridPane {
 	// -------------------------------------------------------------------------
 
 	private void orderByName() {
+		Collections.sort(lvwCompanies.getItems());
 	}
 
 	private void orderByAddress() {

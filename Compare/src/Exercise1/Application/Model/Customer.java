@@ -1,6 +1,6 @@
 package Exercise1.Application.Model;
 
-public class Customer {
+public class Customer implements Comparable<Customer> {
 
     public enum SizeCategory {UNKNOWN, MICRO, SMALL, MEDIUM, LARGE};
     String name;
@@ -45,5 +45,10 @@ public class Customer {
 
     public String toString() {
         return getName()+", " + getStreet()+", " + getZip()+" "+getTown() + " Cat: " + getCategory();
+    }
+
+    @Override
+    public int compareTo(Customer c) {
+        return this.name.compareTo(c.getName());
     }
 }
