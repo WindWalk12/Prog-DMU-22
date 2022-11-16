@@ -53,13 +53,15 @@ public class CompanyPane extends GridPane {
 	// -------------------------------------------------------------------------
 
 	private void orderByName() {
-		Collections.sort(lvwCompanies.getItems());
+		lvwCompanies.getItems().sort(new Customer.CompareByName());
 	}
 
 	private void orderByAddress() {
+		lvwCompanies.getItems().sort(new Customer.CompareByAddress());
 	}
 
 	private void orderBySizeCategory() {
+		lvwCompanies.getItems().sort(new Customer.CompareByCategory());
 	}
 
 }
