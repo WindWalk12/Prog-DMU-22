@@ -15,7 +15,7 @@ public class CustomerController {
     public static ArrayList<Customer> filterByName(String name) {
         ArrayList<Customer> customersBySearch = new ArrayList<>();
         for (Customer c: CustomerController.getCustomers()) {
-            if (c.getName().contains(name)) {
+            if (c.getName().toLowerCase().contains(name.toLowerCase())) {
                 customersBySearch.add(c);
             }
         }
