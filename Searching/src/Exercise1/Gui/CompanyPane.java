@@ -57,7 +57,7 @@ public class CompanyPane extends GridPane {
 
 		Button btnSearchByName = new Button("Search by name");
 		hbxSearchByName.getChildren().add(btnSearchByName);
-		btnSearchByName.setOnAction(event -> this.searchByName(txfByName.getText()));
+		btnSearchByName.setOnAction(event -> this.searchByName());
 
 		txfByName = new TextField();
 		txfByName.setPrefWidth(100);
@@ -68,7 +68,7 @@ public class CompanyPane extends GridPane {
 
 		Button btnSearchByCategory = new Button("Search by Category");
 		hbxSearchByName.getChildren().add(btnSearchByCategory);
-		btnSearchByCategory.setOnAction(event -> this.searchByCategory());
+		btnSearchByCategory.setOnAction(event -> this.filterByCategory());
 		hbxSearchByName.getChildren().add(rbMicro);
 		hbxSearchByName.getChildren().add(rbSmall);
 		hbxSearchByName.getChildren().add(rbMedium);
@@ -98,26 +98,14 @@ public class CompanyPane extends GridPane {
 		lvwCompanies.getItems().sort(new Customer.CompareByCategory());
 	}
 
-	private void searchByName(String name) {
-		ArrayList<Customer> customersBySearch = new ArrayList<>();
-		for (Customer c: CustomerController.getCustomers()) {
-			if (c.getName().contains(name)) {
-				customersBySearch.add(c);
-			}
-		}
-		lvwCompanies.getItems().setAll(customersBySearch);
+	private void searchByName() {
+		lvwCompanies.getItems().setAll(CustomerController.searchByName(txfByName.getText()));
 	}
 
-	private void searchByCategory() {
+	private void filterByCategory() {
 		if (group.getSelectedToggle() != null) {
-			ArrayList<Customer> customersByCategory = new ArrayList<>();
 			RadioButton rb = (RadioButton) group.getSelectedToggle();
-			for (Customer c: CustomerController.getCustomers()) {
-				if (c.getCategory() == rb.getUserData()) {
-					customersByCategory.add(c);
-				}
-			}
-			lvwCompanies.getItems().setAll(customersByCategory);
+			lvwCompanies.getItems().setAll(CustomerController.filterByCategory(rb));
 			group.selectToggle(null);
 		}
 	}
