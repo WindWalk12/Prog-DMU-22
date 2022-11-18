@@ -8,8 +8,6 @@ import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 
-import java.util.ArrayList;
-
 public class CompanyPane extends GridPane {
 	private ListView<Customer> lvwCompanies;
 	private TextField txfByName;
@@ -55,9 +53,9 @@ public class CompanyPane extends GridPane {
 		HBox hbxSearchByName = new HBox(10);
 		this.add(hbxSearchByName, 0, 5);
 
-		Button btnSearchByName = new Button("Search by name");
+		Button btnSearchByName = new Button("filter by name");
 		hbxSearchByName.getChildren().add(btnSearchByName);
-		btnSearchByName.setOnAction(event -> this.searchByName());
+		btnSearchByName.setOnAction(event -> this.filterByName());
 
 		txfByName = new TextField();
 		txfByName.setPrefWidth(100);
@@ -66,7 +64,7 @@ public class CompanyPane extends GridPane {
 		HBox hbxSearchByCategory = new HBox(10);
 		this.add(hbxSearchByCategory, 0, 6);
 
-		Button btnSearchByCategory = new Button("Search by Category");
+		Button btnSearchByCategory = new Button("filter by Category");
 		hbxSearchByName.getChildren().add(btnSearchByCategory);
 		btnSearchByCategory.setOnAction(event -> this.filterByCategory());
 		hbxSearchByName.getChildren().add(rbMicro);
@@ -98,8 +96,8 @@ public class CompanyPane extends GridPane {
 		lvwCompanies.getItems().sort(new Customer.CompareByCategory());
 	}
 
-	private void searchByName() {
-		lvwCompanies.getItems().setAll(CustomerController.searchByName(txfByName.getText()));
+	private void filterByName() {
+		lvwCompanies.getItems().setAll(CustomerController.filterByName(txfByName.getText()));
 	}
 
 	private void filterByCategory() {

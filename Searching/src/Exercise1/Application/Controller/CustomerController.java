@@ -12,7 +12,7 @@ public class CustomerController {
         return new ArrayList<Customer>(CustomerStorage.getAll());
     }
 
-    public static ArrayList<Customer> searchByName(String name) {
+    public static ArrayList<Customer> filterByName(String name) {
         ArrayList<Customer> customersBySearch = new ArrayList<>();
         for (Customer c: CustomerController.getCustomers()) {
             if (c.getName().contains(name)) {
