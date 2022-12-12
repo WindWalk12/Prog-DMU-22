@@ -15,7 +15,7 @@ public class App {
         int[] result = new int[Math.min(a1.length, a2.length)];
         int i = 0;
         int resI = 0;
-        while (a1.length > i) {
+        while (a1.length > i && a2.length > i) {
             boolean matchFound = false;
             for (int k = 0; k < a2.length; k++) {
                 if (a1[i] == a2[k]) {
