@@ -12,18 +12,7 @@ public class App {
     }
 
     public static int[] intersection(int[] a1, int [] a2) {
-        int matching = 0;
-        int j = 0;
-        while (a1.length > j) {
-            for (int k = 0; k < a2.length; k++) {
-                if (a1[j] == a2[k]) {
-                    matching++;
-                    break;
-                }
-            }
-            j++;
-        }
-        int[] result = new int[matching];
+        int[] result = new int[Math.min(a1.length, a2.length)];
         int i = 0;
         int resI = 0;
         while (a1.length > i) {
@@ -36,6 +25,6 @@ public class App {
             }
             i++;
         }
-        return result;
+        return Arrays.copyOf(result, resI);
     }
 }

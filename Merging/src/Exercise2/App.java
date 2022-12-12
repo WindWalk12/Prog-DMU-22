@@ -7,26 +7,12 @@ public class App {
         int[] t1 = {2, 4, 6, 8, 10, 12, 14};
         int[] t2 = {1, 2, 4, 5, 6, 9, 12, 17};
 
-        System.out.println(Arrays.toString(intersection(t1, t2)));
+        System.out.println(Arrays.toString(difference(t1, t2)));
 
     }
 
-    public static int[] intersection(int[] a1, int [] a2) {
-        int matching = 0;
-        int j = 0;
-        while (a1.length > j) {
-            boolean matchFound = false;
-            for (int k = 0; k < a2.length; k++) {
-                if (a1[j] == a2[k]) {
-                    matchFound = true;
-                }
-            }
-            if (!matchFound) {
-                matching++;
-            }
-            j++;
-        }
-        int[] result = new int[matching];
+    public static int[] difference(int[] a1, int [] a2) {
+        int[] result = new int[Math.min(a1.length, a2.length)];
         int i = 0;
         int resI = 0;
         while (a1.length > i) {
@@ -42,6 +28,6 @@ public class App {
             }
             i++;
         }
-        return result;
+        return Arrays.copyOf(result, resI);
     }
 }
